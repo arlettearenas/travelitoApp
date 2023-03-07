@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:viajes_app/screens/button_navigate.dart';
 import 'package:viajes_app/screens/review.dart';
 import 'package:viajes_app/screens/reviews.dart';
 
@@ -26,7 +27,7 @@ class DescriptionPlaceScreen extends StatelessWidget {
 
     final star = Container(
       margin: const EdgeInsets.only(
-        top: 100.0,
+        top: 400.0,
         right: 3.0,
       ),
       child: const Icon(
@@ -39,7 +40,7 @@ class DescriptionPlaceScreen extends StatelessWidget {
       children: [
         Container(
           margin: const EdgeInsets.only(
-            top: 100.0,
+            top: 400.0,
             left: 20.0,
             right: 20.0,
           ),
@@ -77,6 +78,7 @@ class DescriptionPlaceScreen extends StatelessWidget {
       children: [
         titleAndStars,
         description,
+        const ButtonNavigate(buttonText: 'Navigate'),
       ],
     );
   }

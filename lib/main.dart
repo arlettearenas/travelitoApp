@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:viajes_app/screens/description_place_screen.dart';
+import 'package:viajes_app/screens/header.dart';
 import 'package:viajes_app/screens/reviews.dart';
 
 void main() {
@@ -14,16 +15,23 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        //     body: DescriptionPlaceScreen(
-        //   descriptionPlace: descriptionText,
-        //   namePlace: namePlace,
-        //   stars: 4,
-        // ),
-        body: Reviews(),
-      ),
+          body: Stack(
+        children: <Widget>[
+          ListView(
+            children: <Widget>[
+              DescriptionPlaceScreen(
+                  descriptionPlace: descriptionText,
+                  namePlace: namePlace,
+                  stars: 4),
+              const Reviews(),
+            ],
+          ),
+          const Header(),
+        ],
+      )),
     );
   }
 }
