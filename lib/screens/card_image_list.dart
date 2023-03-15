@@ -12,9 +12,9 @@ class CardImageList extends StatelessWidget {
         padding: const EdgeInsets.all(25.0),
         scrollDirection: Axis.horizontal,
         children: const [
-          CardImage(pathImage: '/img/profile5.jpg'),
-          CardImage(pathImage: '/img/profile6.jpg'),
-          CardImage(pathImage: '/img/profile7.jpg'),
+          CardImage(pathImage: 'assets/img/profile5.jpg'),
+          CardImage(pathImage: 'assets/img/profile6.jpg'),
+          CardImage(pathImage: 'assets/img/profile7.jpg'),
         ],
       ),
     );
